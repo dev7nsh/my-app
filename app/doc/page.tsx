@@ -45,7 +45,7 @@ export default function DocPage() {
                   or we can inline them like below. Let's inline GitHub Dark styling. */}
 
               <h1 className="text-3xl md:text-4xl font-semibold border-b border-[#21262d] pb-2 mb-6 text-[#c9d1d9] flex pb-3">
-                My First Web3 App 🚀
+                Web3 Counter dApp
               </h1>
 
               <p className="mb-4 text-[#8b949e] text-base leading-relaxed">
