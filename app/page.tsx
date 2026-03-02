@@ -15,28 +15,7 @@ export default function page() {
         <h1 className="text-2xl font-bold mb-4 text-center">My dApp</h1>
 
         {/* Counter Type Toggle */}
-        <div className="flex gap-2 mb-4 justify-center">
-          <button
-            onClick={() => setUseSimpleCounter(true)}
-            className={`px-3 py-1 rounded text-sm ${
-              useSimpleCounter 
-                ? 'bg-blue-500 text-white' 
-                : 'bg-gray-200 text-gray-700'
-            }`}
-          >
-            Simple Counter
-          </button>
-          <button
-            onClick={() => setUseSimpleCounter(false)}
-            className={`px-3 py-1 rounded text-sm ${
-              !useSimpleCounter 
-                ? 'bg-blue-500 text-white' 
-                : 'bg-gray-200 text-gray-700'
-            }`}
-          >
-            Transaction Button Counter
-          </button>
-        </div>
+        
 
         {account ? (
           <>
@@ -45,7 +24,7 @@ export default function page() {
             }} />
 
             <div className='text-center text-3xl font-bold pt-3.5'>
-              {useSimpleCounter ? <SimpleCounter /> : <Counter />}
+               <Counter />
             </div>
           </>
         ) : (
