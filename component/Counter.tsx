@@ -10,14 +10,9 @@ const Counter = () => {
         method: "getCount"
     });
     console.log(data, "data counter ");
-
-    const testToast = () => {
-        toast.success("Test toast is working! 🎉");
-    };
-
     return (
         <div>
-            {countLoading ? ( 
+            {countLoading ? (
                 <div><h1>Loading...</h1></div>
             ) : (
                 <div>
@@ -33,7 +28,7 @@ const Counter = () => {
                     </button> */}
 
                     <div className='flex gap-2 justify-around mt-4'>
-                        <TransactionButton 
+                        <TransactionButton
                             transaction={() => prepareContractCall({
                                 contract,
                                 method: "decrement",
@@ -60,10 +55,10 @@ const Counter = () => {
                             }}
                             className="px-6 py-2 rounded-xl bg-linear-to-r from-red-500 to-red-600 text-white font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200"
                         >
-                            -                     
+                            -
                         </TransactionButton>
 
-                        <TransactionButton 
+                        <TransactionButton
                             transaction={() => prepareContractCall({
                                 contract,
                                 method: "increment",
@@ -90,7 +85,7 @@ const Counter = () => {
                             }}
                             className="px-6 py-2 rounded-xl bg-linear-to-r from-green-500 to-green-600 text-white font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200"
                         >
-                            +                    
+                            +
                         </TransactionButton>
                     </div>
                 </div>

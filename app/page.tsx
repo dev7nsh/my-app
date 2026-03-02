@@ -1,47 +1,72 @@
 "use client";
 import Counter from '@/component/Counter';
-import SimpleCounter from '@/component/SimpleCounter';
 import { client } from '@/utils/contants';
-import React, { useState } from 'react';
+import React from 'react';
 import { ConnectButton, useActiveAccount } from "thirdweb/react";
 
-export default function page() {
+export default function Page() {
   const account = useActiveAccount();
-  const [useSimpleCounter, setUseSimpleCounter] = useState(true);
 
   return (
-    <div className="min-h-screen flex items-center justify-center ">
-      <div className="p-8 rounded-lg shadow-md max-w-md">
-        <h1 className="text-2xl font-bold mb-4 text-center">My dApp</h1>
+    <div>
+      {account && (
+        <div>
+          <header className='h-fit p-4 flex justify-around'>
+            <h1 className="text-2xl font-bold ">My dApp</h1>
+            <div className=' '>
+              <ConnectButton client={client} connectModal={{
+                size: "compact"
+              }} />
+            </div>
 
-        {/* Counter Type Toggle */}
-        
+          </header>
+        </div>
 
-        {account ? (
-          <>
-            <ConnectButton client={client} connectModal={{
+      )}
+
+
+
+
+      <div className="min-h-screen flex items-center justify-center ">
+        <div className="p-8 rounded-lg shadow-md max-w-md">
+
+
+          {/* Counter Type Toggle */}
+
+
+          {account ? (
+            <>
+              {/* <div className='flex items-center justify-center '>
+             <ConnectButton  client={client} connectModal={{
               size: "compact"
             }} />
+          </div>
+            */}
 
-            <div className='text-center text-3xl font-bold pt-3.5'>
-               <Counter />
+              <div className='text-center text-3xl font-bold pt-3.5'>
+                <Counter />
+              </div>
+            </>
+          ) : (
+            <div>
+              <h1 className="text-2xl font-bold mb-4 text-center">My dApp</h1>
+              <ConnectButton client={client} connectModal={{
+                size: "compact"
+              }} />
             </div>
-          </>
-        ) : (
-          <ConnectButton client={client} connectModal={{
-            size: "compact"
-          }} />
-        )}
 
-        
-
-        
+          )}
 
 
+
+
+
+
+        </div>
       </div>
     </div>
   );
 }
 
 
- 
+
