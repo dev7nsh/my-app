@@ -43,12 +43,7 @@ export const metadata: Metadata = {
     url: "https://dapp.chouhan.me",
     siteName: "Web3 Counter dApp",
     images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Web3 Counter dApp Preview",
-      },
+      "https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyemU4bmdiOWdmam5wNTVkOWQzazNkNTBjMmFwM3ltaTNnN3U1amN3MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Zr4T8FFFuZ3DIFgJCK/giphy.gif",
     ],
     type: "website",
   },
@@ -70,7 +65,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThirdwebProvider client={client}>
+        <ThirdwebProvider >
           {children}
           <ToastProvider />
         </ThirdwebProvider>
