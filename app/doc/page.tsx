@@ -12,7 +12,7 @@ export default function DocPage() {
       <Head>
         <title>Devansh Chouhan - First Web3 dApp | Smart Contract Experience</title>
         <meta name="description" content="Explore Devansh Chouhan's first Web3 dApp. A decentralized counter application built with React, Solidity, and Thirdweb, deployed on Sepolia Testnet. Learn how smart contracts store state and handle on-chain transactions." />
-        <meta name="keywords" content="Devansh Chouhan, Web3, dApp, Solidity, React, Thirdweb, Smart Contract, Blockchain, Ethereum, Sepolia" />
+        <meta name="keywords" content="Devansh Chouhan, Web3, dApp, Solidity, React, Thirdweb, Smart Contract, Blockchain, Ethereum, Sepolia, new software developer search for beginner project, beginner web3 project, first smart contract project, easy dApp for beginners, react solidity beginner project, blockchain project for new developers, web3 project ideas for students" />
       </Head>
 
       <div className="min-h-screen bg-[#0d1117] text-[#c9d1d9] py-8 px-4 sm:px-6 lg:px-8 selection:bg-[#388bfd] selection:bg-opacity-30" style={{ fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}>
@@ -147,6 +147,13 @@ export default function DocPage() {
                   "This project represents the foundation of my blockchain development journey."
                 </p>
               </div>
+
+              <h2 className="text-2xl font-semibold border-b border-[#21262d] pb-2 mb-4 mt-8 text-[#c9d1d9]">
+                🚀 Who Is This For?
+              </h2>
+              <p className="mb-4 text-[#8b949e] leading-relaxed">
+                If you are a <strong className="text-[#c9d1d9]">new software developer search for beginner project</strong> or looking for a <strong className="text-[#c9d1d9]">beginner web3 project</strong>, this repository is for you. It serves as an excellent reference for your <strong className="text-[#c9d1d9]">first smart contract project</strong> or if you need an <strong className="text-[#c9d1d9]">easy dApp for beginners</strong> to understand the basics. Whether you want a <strong className="text-[#c9d1d9]">react solidity beginner project</strong> or a solid <strong className="text-[#c9d1d9]">blockchain project for new developers</strong>, this acts as a perfect starting point, providing great <strong className="text-[#c9d1d9]">web3 project ideas for students</strong>.
+              </p>
 
               <h2 className="text-2xl font-semibold border-b border-[#21262d] pb-2 mb-4 mt-8 text-[#c9d1d9]">
                 🌐 Connect with Me
