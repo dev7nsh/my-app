@@ -5,6 +5,7 @@ import { ThirdwebProvider } from "thirdweb/react";
 import ToastProvider from "@/components/ToastProvider";
 import { client } from "@/utils/contants";
 
+import { Analytics } from "@vercel/analytics/next"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -65,6 +66,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Analytics />
         <ThirdwebProvider >
           {children}
           <ToastProvider />
