@@ -4,6 +4,9 @@ import { client } from '@/utils/contants';
 import React from 'react';
 import { ConnectButton, useActiveAccount } from "thirdweb/react";
 import Link from 'next/link';
+import { defineChain } from "thirdweb/chains";
+
+const sepolia = defineChain(11155111);
 
 export default function Page() {
   const account = useActiveAccount();
@@ -19,7 +22,7 @@ export default function Page() {
                 <svg className="w-5 h-5 mr-2 text-gray-400 group-hover:text-blue-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 About
               </Link>
-              <ConnectButton client={client} connectModal={{
+              <ConnectButton client={client} chain={sepolia} chains={[sepolia]} connectModal={{
                 size: "compact"
               }} />
             </div>
@@ -57,7 +60,7 @@ export default function Page() {
               <h1 className="text-xl md:text-2xl font-bold mb-4 text-center">Welcome to Web3 Counter dApp</h1>
               <p className="mb-6 text-gray-500 text-center">Connect your wallet to get started and interact with the blockchain.</p>
               <div className="flex flex-col items-center space-y-4">
-                <ConnectButton client={client} connectModal={{
+                <ConnectButton client={client} chain={sepolia} chains={[sepolia]} connectModal={{
                   size: "compact"
                 }} />
                 <Link href="/doc" className="group flex items-center px-4 py-2 md:px-5 md:py-2.5 text-sm font-semibold text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-xl transition-all duration-200 mt-4 shadow-sm hover:shadow-md">

@@ -6,6 +6,7 @@ import ToastProvider from "@/components/ToastProvider";
 import { client } from "@/utils/contants";
 
 import { Analytics } from "@vercel/analytics/next"
+import { sepolia } from "thirdweb/chains";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -67,7 +68,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Analytics />
-        <ThirdwebProvider >
+        <ThirdwebProvider activeChain={sepolia} >
           {children}
           <ToastProvider />
         </ThirdwebProvider>
