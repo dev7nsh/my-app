@@ -68,7 +68,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Analytics />
-        <ThirdwebProvider activeChain={sepolia} >
+        <ThirdwebProvider  >
           {children}
           <ToastProvider />
         </ThirdwebProvider>
