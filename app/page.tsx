@@ -54,6 +54,22 @@ export default function Page() {
               <div className='text-center text-3xl font-bold pt-3.5'>
                 <Counter />
               </div>
+              <div className="flex justify-center mt-4">
+                <a
+                  href="https://sepolia.etherscan.io/address/0x5b391Fd7D44eB707C6aB265839F3c5B62FCbb5a6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-200 group"
+                >
+                  <svg className="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                  Check All Blocks on Sepolia Explorer
+                  <svg className="w-3.5 h-3.5 ml-0.5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </div>
             </>
           ) : (
             <div className="flex flex-col items-center">
